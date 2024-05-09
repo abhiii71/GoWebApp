@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gowebapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gowebapp
+  template:
+    metadata:
+      labels:
+        app: gowebapp
+    spec:
+      containers:
+      - name: gowebapp
+        image: helloabhii/gowebapp:latest
+        ports:
+        - containerPort: 8080
+
