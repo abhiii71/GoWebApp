@@ -6,8 +6,6 @@ RUN apk add --no-cache git
 
 RUN git clone https://github.com/helloabhii/GoWebApp .
 
-WORKDIR /app
-
 COPY go.mod .
 
 RUN go build -o main .
